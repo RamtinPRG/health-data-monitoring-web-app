@@ -1,3 +1,14 @@
-html, body, #root, .app{
+html,
+body,
+#root,
+.App {
   height: 100%;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+::selection {
+  background-color: #1d90f3;
+  color: #fff;
 }

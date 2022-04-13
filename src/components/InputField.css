@@ -1,0 +1,34 @@
+.input-field {
+  display: flex;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 0;
+  background-color: #323645;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field > input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex-grow: 1;
+  min-width: 0;
+  color: rgb(216, 216, 216);
+  caret-color: rgb(175, 175, 175);
+}
+
+.input-field > i {
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.3s ease-in-out;
+}
+
+.input-field:hover {
+  box-shadow: 0 0 0 0.25rem rgba(29, 143, 243, 0.3);
+  border-color: #1d90f3;
+}
+
+.input-field:hover > i {
+  color: #1d90f3;
+}
