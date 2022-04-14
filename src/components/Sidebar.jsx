@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../contexts/AuthContext";
 import profile from "../images/profile-picture.png";
-import "./Sidebar.css";
+import "./styles/Sidebar.css";
 import SidebarLink from "./SidebarLink";
 
 function Sidebar({ items, selected }) {
@@ -26,7 +26,7 @@ function Sidebar({ items, selected }) {
         {items.map((item, index) => (
           <SidebarLink
             {...item}
-            className={`sidebar-item${selected == index ? " selected" : ""}`}
+            className={`sidebar-item${selected === index ? " selected" : ""}`}
             key={index}
           />
         ))}

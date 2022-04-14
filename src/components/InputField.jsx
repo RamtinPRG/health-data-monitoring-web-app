@@ -1,4 +1,4 @@
-import "./InputField.css";
+import "./styles/InputField.css";
 
 function InputField({
   icon,
