@@ -5,8 +5,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Page404 from "./pages/Page404";
-import DashboardPrivateRoute from "./utils/DashboardPrivateRoute";
-import HomePrivateRoute from "./utils/HomePrivateRoute";
+import AuthenticatedPrivateRoute from "./utils/AuthenticatedPrivateRoute";
+import NotAuthenticatedPrivateRoute from "./utils/NotAuthenticatedPrivateRoute";
 
 function App() {
   return (
@@ -17,19 +17,33 @@ function App() {
             <Route
               path="/"
               element={
-                <HomePrivateRoute>
+                <NotAuthenticatedPrivateRoute>
                   <Home />
-                </HomePrivateRoute>
+                </NotAuthenticatedPrivateRoute>
               }
             />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
+            <Route
+              path="login"
+              element={
+                <NotAuthenticatedPrivateRoute>
+                  <Login />
+                </NotAuthenticatedPrivateRoute>
+              }
+            />
+            <Route
+              path="signup"
+              element={
+                <NotAuthenticatedPrivateRoute>
+                  <Signup />
+                </NotAuthenticatedPrivateRoute>
+              }
+            />
             <Route
               path="dashboard"
               element={
-                <DashboardPrivateRoute>
+                <AuthenticatedPrivateRoute>
                   <Dashboard />
-                </DashboardPrivateRoute>
+                </AuthenticatedPrivateRoute>
               }
             />
             <Route path="*" element={<Page404 />} />

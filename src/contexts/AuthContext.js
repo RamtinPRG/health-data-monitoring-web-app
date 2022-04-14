@@ -19,6 +19,25 @@ export function AuthContextProvider({ children }) {
 
   const navigate = useNavigate();
 
+  const signupUser = async (e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:8000/api/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: e.target.username.value,
+        password: e.target.password.value,
+        email: e.target.email.value,
+        first_name: e.target.first_name.value,
+        last_name: e.target.last_name.value,
+        account_type: e.target.account_type.value,
+      }),
+    });
+    loginUser(e);
+  };
+
   const loginUser = async (e) => {
     e.preventDefault();
     const response = await fetch("http://localhost:8000/api/token/", {
@@ -46,7 +65,7 @@ export function AuthContextProvider({ children }) {
     setAuthTokens(null);
     setUser(null);
     localStorage.removeItem("authTokens");
-    navigate("/login");
+    navigate("/");
   };
 
   const updateToken = async () => {
@@ -78,6 +97,7 @@ export function AuthContextProvider({ children }) {
   const contextData = {
     user,
     authTokens,
+    signupUser,
     loginUser,
     logoutUser,
   };

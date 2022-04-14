@@ -1,0 +1,42 @@
+main.dashboard {
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #3e4156;
+}
+
+.main-container {
+  margin-left: 250px;
+  padding: 50px;
+  min-height: 100%;
+  color: #cfe6ff;
+}
+
+#patients-status {
+  color: rgb(46, 200, 103);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+}
+
+#card-container {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.card {
+  width: 33%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #card-container {
+    flex-direction: column;
+  }
+  .card {
+    width: unset;
+    margin-bottom: 20px;
+  }
+  .card:last-child {
+    margin-bottom: unset;
+  }
+}

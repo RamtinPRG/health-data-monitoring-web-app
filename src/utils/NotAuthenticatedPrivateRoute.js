@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 
-function DashboardPrivateRoute({ children }) {
+function NotAuthenticatedPrivateRoute({ children }) {
   const { user } = useContext(AuthContext);
   console.log("test");
-  return user ? children : <Navigate to="/" />;
+  return user ? <Navigate to="/dashboard" /> : children;
 }
 
-export default DashboardPrivateRoute;
+export default NotAuthenticatedPrivateRoute;
