@@ -1,0 +1,42 @@
+main.patient {
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #3e4156;
+}
+
+.main-container {
+  margin-left: 250px;
+  padding: 50px;
+  min-height: 100%;
+  color: #cfe6ff;
+}
+
+#back-link {
+  text-decoration: none;
+  color: #cfe6ff;
+}
+
+#back-link:hover {
+  color: #1d90f3;
+}
+
+#back-icon {
+  margin-right: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+#back-icon:hover {
+  transform: translateX(-10px);
+}
+
+#patient-email {
+  color: #7c8793;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#chart-container {
+  margin-top: 20px;
+  width: 500px;
+}

@@ -4,7 +4,6 @@ import AuthContext from "../contexts/AuthContext";
 
 function AuthenticatedPrivateRoute({ children }) {
   const { user } = useContext(AuthContext);
-  console.log("test");
   return user ? children : <Navigate to="/" />;
 }
 

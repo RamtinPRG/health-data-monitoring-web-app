@@ -1,0 +1,27 @@
+main.patients {
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #3e4156;
+}
+
+.main-container {
+  margin-left: 250px;
+  padding: 50px;
+  min-height: 100%;
+  color: #cfe6ff;
+}
+
+#patient-card-container {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.patient-card {
+  width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+.patient-card:hover {
+  transform: translateY(-10px);
+}
